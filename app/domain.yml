@@ -1,12 +1,100 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- aboutCET
+- departmentsCET
+- facillitiesCET
+- admissionCET
+- placmentsCET
+- paymentCET
+- greetCET
+- query
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_welcomeCET:
+  - buttons:
+    - payload: aboutCET
+      title: about
+    - payload: departmentsCET
+      title: Departments
+    - payload: facillitiesCET
+      title: Facililties
+    - payload: paymentCET
+      title: Payments
+    - payload: query
+      title: Query
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/cer1.JPG?alt=media&token=8135deda-c365-489a-a9dd-3da8fa9eb3dd
+    text: Hi!Welcome to CET,Help Desk,Please select an option to start .
+  utter_aboutCET:
+  - buttons:
+    - payload: Menu
+      title: Menu
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/aboutus.jpg?alt=media&token=7280bd72-9b16-4e43-b673-faa3b077d413
+    text: The College of Engineering & Technology, Bhubaneswar was established by
+      the Government of Odisha in 1981 to meet the growing technical man power need
+      in the State.  For more details About CET . Please visit “https://www.cet.edu.in/about_cet.php”
+      Want to go back to main menu.
+  utter_departments:
+  - buttons:
+    - payload: Menu
+      title: Menu
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/departments.JPG?alt=media&token=eac7f60d-6820-44c3-b762-76e966a21e46
+    text: The institute currently has 15 departments. All courses are full-time. In
+      the 2014–15 academic year courses started including M.Tech. In every branch,
+      and a 5-years integrated courses (integrated M.Sc.) along with a 2-years M.Sc.
+      inapplied physics, applied chemistry and mathematics and computing.
+  utter_facillities:
+  - buttons:
+    - payload: Menu
+      title: Menu
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/facilities.JPG?alt=media&token=8d74e343-904f-4b25-8485-ac7a98dbbdcc
+    text: Separate hostel facility for boys & girls   full-fledged branch of Syndicate
+      Bank is operating in the college campus. At present, students are residing in
+      the Ladies Hostel (KCHR) of 500 capacity and a Boys Hostel (RHR) of 500 capacity
+      inside the campus.    Banking facility  PFor more details , please visit “https://www.cet.edu.in/facilities.php
+  utter_admission:
+  - buttons:
+    - payload: Menu
+      title: Menu
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/admissions.JPG?alt=media&token=9cfeb015-f914-4cc0-b55c-3b3798122aaf
+    text: CET offers B.Tech under 9 specializations, M.Tech under 16 specializations
+      :M.Sc, MCA, B.Plan and Ph.D courses for which admissions are on the basis of
+      JEE Main, GATE, OJEE entrance exams. For more details . please visit “https://www.cet.edu.in/admission.php”
+      Want to go back to main menu.
+  utter_payments:
+  - buttons:
+    - payload: Menu
+      title: ' Menu'
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/rsz_payment1.jpg?alt=media&token=dbec0229-97d1-476d-b04f-eb099483f7a2
+    text: Want to Pay your dues  Click on the following link  https://www.cet.edu.in/billpayment/
+  utter_query:
+  - buttons:
+    - payload: Menu
+      title: Menu
+    image: https://firebasestorage.googleapis.com/v0/b/cetchatbot-16904.appspot.com/o/contactdetails.JPG?alt=media&token=67ba02bc-bec4-4970-b23c-36c101bd1c03
+    text: 'College of Engineering & Technology Ghatikia, Kalinga Nagar Bhubaneswar-
+      751003 Odisha, India Phone: +91 674 2386075 Fax: + 91 674 2386182 Email: info@cet.edu.in
+      Website: www.cet.edu.in'
 actions:
 - utter_greet
 - utter_cheer_up
@@ -14,27 +102,10 @@ actions:
 - utter_happy
 - utter_goodbye
 - utter_iamabot
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+- utter_facillities
+- utter_welcomeCET
+- utter_aboutCET
+- utter_departments
+- utter_admission
+- utter_payments
+- utter_query
